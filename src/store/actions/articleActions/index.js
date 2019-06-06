@@ -1,6 +1,15 @@
 import axios from 'axios';
-import { baseURL } from 'utils';
-import { GET_ARTICLES, GET_ARTICLES_START, GET_ARTICLES_ERROR } from 'store/actions/articleTypes';
+import { baseURL, author, axiosConfig } from 'utils';
+import {
+  GET_ARTICLES,
+  GET_ARTICLES_START,
+  GET_ARTICLES_ERROR,
+  GET_ARTICLE,
+  MY_ARTICLES,
+  NEW_ARTICLE,
+  EDIT_ARTICLE,
+  DELETE_ARTICLE,
+} from 'store/actions/articleTypes';
 
 // action creators
 
@@ -23,6 +32,11 @@ export const getArticles = articles => ({ articles, type: GET_ARTICLES });
  * @return {action} - Action to addthe error to the store
  */
 export const getArticalsError = error => ({ error, type: GET_ARTICLES_ERROR });
+export const getArticle = article => ({ article, type: GET_ARTICLE });
+export const myArticles = articles => ({ articles, type: MY_ARTICLES });
+export const createArticle = article => ({ article, type: NEW_ARTICLE });
+export const editArticle = article => ({ article, type: EDIT_ARTICLE });
+export const deleteArticle = article => ({ article, type: DELETE_ARTICLE });
 
 // thunks
 
@@ -43,10 +57,35 @@ export const getAllArticles = () => (dispatch) => {
     .catch(error => dispatch(getArticalsError(error)));
 };
 
+export const getAllMyAricles = () => (dispatch) => {
+  const url = `${baseURL}${'/articles/?author='}${author}`;
+
+  // fetch all logged in user's articles
+  axios.get(url, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(({ data }) => dispatch(myArticles(data.results.articles)))
+    .catch(error => dispatch(getArticalsError(error)));
+};
+export const newArticle = article => (dispatch) => {
+  const url = `${baseURL}${'/articles/'}`;
+  return axios.post(url, article, axiosConfig)
+    .then((response) => {
+      dispatch(createArticle(response.data.results));
+    });
+};
+
 // export collection object
 const articleActions = {
   getArticles,
   getAllArticles,
+  getArticle,
+  getAllMyAricles,
+  createArticle,
+  editArticle,
+  deleteArticle,
 };
 
 export default articleActions;

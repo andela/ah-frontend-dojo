@@ -1,7 +1,8 @@
 import { shallow } from 'enzyme';
 
-export const baseURL = 'https://ah-backend-dojo-dev.herokuapp.com/api';
-
+export const baseURL = 'http://127.0.0.1:8000/api';
+// export const baseURL = 'https://ah-backend-dojo-dev.herokuapp.com/api';
+export const author = sessionStorage.getItem('username');
 export const formatDate = (rawDate) => {
   const longDateTime = new Date(rawDate);
 
@@ -52,6 +53,7 @@ export const mockArticle = (
     ],
   });
 
+// eslint-disable-next-line no-undef
 const renderComponent = component => shallow(component);
 
 export const shouldContainClass = (component, className) => {
@@ -61,3 +63,12 @@ export const shouldContainClass = (component, className) => {
 export const shouldContainText = (component, className, text) => {
   expect(renderComponent(component).find(className).text()).toBe(text);
 };
+
+export const axiosConfig = {
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${sessionStorage.getItem('access_token')}`,
+  },
+};
+
+export default formatDate;

@@ -1,0 +1,66 @@
+.inputPanel {
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem 0 1.25rem;
+  height: 40rem;
+}
+
+.inputPanel img {
+  float: right;
+  width: 18%;
+  margin-top: 8rem;
+}
+
+.inputPanel div {
+  float: left;
+  width: 90%;
+}
+
+.inputForm form {
+  width: 100%;
+  padding: 0.5rem 0;
+}
+
+.inputForm input, .inputForm button, .inputForm textarea {
+  width: 100%;
+  background: #2D658612;
+  border: 0.06rem #2D658612 solid;
+  border-radius: 0.6rem;
+  padding: 0 0.6rem;
+  outline: none;
+  margin: 0.4rem 0;
+}
+
+.inputForm input {
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.inputForm button {
+  width: 8.12rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  background: #2D6686;
+  border: 0.06rem #2D6686 solid;
+  cursor: pointer;
+}
+
+.inputForm button:hover {
+  opacity: 0.9;
+}
+
+.inputForm button:active {
+  opacity: 1;
+}
+
+#description {
+  height: 4rem;
+  font-size: 1rem;
+}
+
+.inputForm textarea {
+  height: 20rem;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+}

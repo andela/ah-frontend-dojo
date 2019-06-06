@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Component matches the snapshot 1`] = `
+<div
+  align="center"
+>
+  <div
+    className="mainPage"
+  >
+    <div
+      className="header"
+    >
+      <div
+        align="right"
+        className="right-header-panel"
+      >
+        <div
+          align="center"
+          className="authContainer"
+        >
+          <li>
+            <a
+              href="http://localhost:8080/login"
+            />
+          </li>
+          <li>
+            |
+          </li>
+          <li>
+            <a
+              href="http://localhost:8080/signup"
+            >
+              Sign out
+            </a>
+          </li>
+        </div>
+        <button
+          className="button botton-size-1"
+          type="button"
+        >
+          Home
+        </button>
+        <button
+          className="button botton-size-1 active-botton"
+          type="button"
+        >
+          Articles
+        </button>
+      </div>
+      <img
+        alt="logo"
+        className="logo"
+        src="../src/assets/logo.png"
+      />
+      <div
+        align="left"
+        className="breadcrumbs"
+      >
+        <ul>
+          <li>
+            <a
+              href="http://localhost:8080/articles/"
+            >
+              <b>
+                Articles
+              </b>
+            </a>
+          </li>
+          <li>
+             / 
+          </li>
+          <li>
+            Create Article
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      align="left"
+      className="inputPanel"
+    >
+      <div
+        className="inputForm"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <input
+            name="title"
+            onChange={[Function]}
+            placeholder="Title"
+            type="text"
+          />
+          <input
+            id="description"
+            name="description"
+            onChange={[Function]}
+            placeholder="Description"
+            type="text"
+          />
+          <textarea
+            name="body"
+            onChange={[Function]}
+            placeholder="Body"
+            type="text"
+          />
+          <button
+            type="submit"
+          >
+            Create Article
+          </button>
+        </form>
+      </div>
+    </div>
+    <div>
+      <input
+        className="search-bar"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
