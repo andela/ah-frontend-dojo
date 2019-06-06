@@ -1,0 +1,182 @@
+@import 'assets/MainStyle.scss';
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import "sass-rem";
+
+.canvas {
+  background: $white;
+}
+
+.inputPanel {
+  margin-top: 2rem;
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem 0 1.25rem;
+  height: 40rem;
+}
+
+.inputPanel img {
+  float: right;
+  width: 18%;
+  margin-top: 8rem;
+}
+
+.inputPanel div {
+  float: left;
+  width: 100%;
+}
+
+.inputForm form {
+  width: 70%;
+  padding: 0.5rem 0;
+  background: #FFFFFF;
+}
+
+.inputForm input, .inputForm button, .inputForm textarea {
+  width: 100%;
+  border-radius: 0.6rem;
+  padding: 0 0.6rem;
+  outline: none;
+  margin: 0.4rem 0;
+}
+
+.inputForm input, .inputForm textarea {
+  height: 2.5rem;
+  font-size: 1rem;
+  background: $primary-light-2;
+  font-family: $primary-font-family;
+  border: 0.06rem $primary-light-3 solid;
+}
+
+#description {
+  height: 4rem;
+  font-size: 1rem;
+}
+
+.inputForm textarea {
+  height: 20rem;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+}
+
+.inputForm input:hover, .inputForm textarea:hover {
+  border: 0.05rem $primary solid;
+}
+
+.inputForm input:focus, .inputForm textarea:focus {
+  border: 0.05rem $primary solid;
+}
+
+.editButtons {
+  width: 100%;
+}
+
+.editButtons button {
+  margin-right: 1rem;
+  width: 20px;
+}
+
+.editButton {
+  height: 2rem;
+  margin: 0 2rem;
+  font-size: 1rem;
+  font-family: $primary-font-family;
+  color: $primary;
+  background: $white;
+  border: 0.06rem $primary solid;
+  padding: 0.5rem 2rem;
+  border-radius: 50rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.editButton:hover {
+  color: $white;
+  background: $primary;
+}
+
+.editButton:active {
+  color: $secondary;
+}
+
+.writter_active {
+  color: $white;
+  background: $primary;
+}
+
+.protectedButtons {
+  align-items: right;
+  padding: 0.5rem 0;
+  padding-right: 0.5rem;
+}
+
+.blue {
+  border: 0.06rem $blue solid;
+  color: $blue;
+  font-size: 1rem;
+  border-radius: 50rem;
+  cursor: pointer;
+}
+
+.red {
+  border: 0.06rem $red solid;
+  color: #FF1C1C;
+  font-size: 1rem;
+  border-radius: 50rem;
+  cursor: pointer;
+}
+
+.protectedButtons a, .protectedButtons button {
+  display: inline;
+  background: $white;
+  margin: 0 0.5rem;
+  padding: 0.2rem 1rem;
+  outline: none;
+  text-decoration: none;
+  font-family: $primary-font-family;
+  box-shadow: $box-shadow-grey;
+}
+
+.protectedButtons form {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.protectedButtons a:hover,  .protectedButtons button:hover {
+  opacity: 0.8;
+}
+
+.protectedButtons a:active,  .protectedButtons button:active {
+  opacity: 1;
+}
+
+// id element calls
+#edit, #cancel {
+  padding: 0.2rem 0;
+  width: 8rem;
+  margin-right: 1rem;
+  float: left;
+  color: $primary;
+  background: $white;
+}
+
+#edit:hover {
+  color: $green;
+  border: 0.06rem $green solid;
+}
+
+#cancel:hover {
+  color: $red;
+  border: 0.06rem $red solid;
+}
+
+#edit:active {
+  color: $blue;
+  border: 0.06rem $blue solid;
+}
+
+#cancel:active {
+  color: $white;
+  border: 0.06rem $red solid;
+  background: $red;
+}

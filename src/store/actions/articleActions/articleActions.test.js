@@ -1,5 +1,6 @@
 import mockAxios from 'axios';
 import configureMockStore from 'redux-mock-store';
+import moxios from 'moxios';
 import thunk from 'redux-thunk';
 import { getAllArticles } from 'store/actions/articleActions';
 import { GET_ARTICLES, GET_ARTICLES_START } from '../articleTypes';

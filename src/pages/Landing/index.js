@@ -115,7 +115,7 @@ LandingPage.defaultProps = {
  * @return {articles} - An aray of articles
  *
  */
-const mapStateToProps = state => state.articles;
+const mapStateToProps = state => state.articlesReducer;
 /**
  * This is a function to pass the state as a prop.
  * @param {dispatch}  - The dispatch function

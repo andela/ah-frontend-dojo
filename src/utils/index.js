@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme';
 import jwt_decode from 'jwt-decode';
 
+export const defaultImgURL = '../../src/assets';
 export const baseURL = 'https://ah-backend-dojo-dev.herokuapp.com/api';
-
 export const formatDate = (rawDate) => {
   const longDateTime = new Date(rawDate);
 
@@ -89,3 +89,12 @@ export const isAuthenticated = () => {
     };
   }
 };
+
+export const axiosConfig = {
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${sessionStorage.getItem('ahToken')}`,
+  },
+};
+
+export default formatDate;

@@ -54,7 +54,6 @@ describe('Password Reset Component', () => {
   const buttonWrapper = wrapper.find('.password-reset__fields__field__button');
 
   it('should render without exploding', () => {
-    const wrapper = shallow(<PasswordReset />);
     expect(wrapper.length).toBe(1);
   });
 

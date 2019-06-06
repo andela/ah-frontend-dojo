@@ -75,6 +75,7 @@
     "react-dom": "^16.8.6",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.0.4",
+    "react-ionicons": "^3.0.1",
     "react-redux": "^7.0.3",
     "react-router": "^5.0.1",
     "react-router-dom": "^4.3.1",

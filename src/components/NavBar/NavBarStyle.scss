@@ -54,6 +54,15 @@
           padding-top: rem(10px);
           text-decoration: none;
           color: $primary;
+
+          a {
+            text-decoration: none;
+            color: $primary;
+
+            &:hover {
+              color: $secondary;
+            }
+          }
         }
 
         &:nth-child(1) {
