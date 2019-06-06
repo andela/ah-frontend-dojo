@@ -1,8 +1,9 @@
 import { shallow } from 'enzyme';
 import jwt_decode from 'jwt-decode';
 
-export const baseURL = 'https://ah-backend-dojo-dev.herokuapp.com/api';
-
+export const baseURL = 'http://127.0.0.1:8000/api';
+// export const baseURL = 'https://ah-backend-dojo-dev.herokuapp.com/api';
+export const author = sessionStorage.getItem('username');
 export const formatDate = (rawDate) => {
   const longDateTime = new Date(rawDate);
 
@@ -53,6 +54,7 @@ export const mockArticle = (
     ],
   });
 
+// eslint-disable-next-line no-undef
 const renderComponent = component => shallow(component);
 
 export const shouldContainClass = (component, className) => {
@@ -89,3 +91,12 @@ export const isAuthenticated = () => {
     };
   }
 };
+
+export const axiosConfig = {
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${sessionStorage.getItem('ahToken')}`,
+  },
+};
+
+export default formatDate;

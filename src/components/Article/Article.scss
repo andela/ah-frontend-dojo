@@ -1,0 +1,94 @@
+@import 'assets/MainStyle.scss';
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import "sass-rem";
+
+.canvas {
+  background: $white;
+}
+
+.inputPanel {
+  margin-top: 2rem;
+  float: left;
+  width: 100%;
+  padding: 0 1.25rem 0 1.25rem;
+  height: 40rem;
+}
+
+.inputPanel img {
+  float: right;
+  width: 18%;
+  margin-top: 8rem;
+}
+
+.inputPanel div {
+  float: left;
+  width: 100%;
+}
+
+.inputForm form {
+  width: 70%;
+  padding: 0.5rem 0;
+  background: #FFFFFF;
+}
+
+.inputForm input, .inputForm button, .inputForm textarea {
+  width: 100%;
+  border-radius: 0.6rem;
+  padding: 0 0.6rem;
+  outline: none;
+  margin: 0.4rem 0;
+}
+
+.inputForm input, .inputForm textarea {
+  height: 2.5rem;
+  font-size: 1rem;
+  background: $primary-light-2;
+  font-family: $primary-font-family;
+  border: 0.06rem $primary-light-3 solid;
+}
+
+#description {
+  height: 4rem;
+  font-size: 1rem;
+}
+
+.inputForm textarea {
+  height: 20rem;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+}
+
+.inputForm input:hover, .inputForm textarea:hover {
+  border: 0.05rem $primary solid;
+}
+
+.inputForm input:focus, .inputForm textarea:focus {
+  border: 0.05rem $primary solid;
+}
+
+.inputForm button {
+  height: 2rem;
+  font-size: 1rem;
+  font-family: $primary-font-family;
+  color: $primary;
+  background: $white;
+  border: 0.06rem $primary solid;
+  padding: 0.5rem 2rem;
+  border-radius: rem(50px);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.inputForm button:hover {
+  color: $white;
+  background: $primary;
+}
+
+.inputForm button:active {
+  color: $secondary;
+}
+
+.writter_active {
+  color: $white;
+  background: $primary;
+}

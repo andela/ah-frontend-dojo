@@ -1,0 +1,41 @@
+@import 'assets/MainStyle.scss';
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import "sass-rem";
+
+.CommentsContainer {
+  width: 100%;
+}
+
+.commentForm form {
+  width: 100%;
+  padding: none;
+  background: none;
+}
+
+.commentForm form textarea {
+  outline: none;
+  width: 100%;
+  border: 0.06rem $primary-light-2 solid;
+  background: $white;
+  border-radius: 0.7rem;
+  padding: 0.5rem;
+  height: 4rem;
+}
+
+.commentForm form textarea:hover, .commentForm form textarea:focus {
+  border: 0.06rem $primary-light-3 solid;
+}
+
+.commentForm form button {
+  background: $white;
+  padding: 0.2rem 0.5rem;
+  border: 0.06rem $primary solid;
+  border-radius: 50rem;
+  color: $primary;
+  cursor: pointer;
+}
+
+.commentForm form button:hover {
+  background: $primary;
+  color: $white;
+}

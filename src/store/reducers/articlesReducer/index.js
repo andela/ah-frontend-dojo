@@ -1,6 +1,7 @@
 // action-types
 import {
   GET_ARTICLES,
+  MY_ARTICLES,
   GET_ARTICLES_START,
   GET_ARTICLES_ERROR,
 } from 'store/actions/articleTypes';
@@ -11,7 +12,7 @@ const initialState = {
   errors: [],
 };
 
-const articles = (state = initialState, action) => {
+const articlesReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ARTICLES_START:
       return Object.assign({}, state, { isFetching: true });
@@ -20,6 +21,13 @@ const articles = (state = initialState, action) => {
       return Object.assign({}, state,
         {
           isFetching: false,
+          articles: action.articles,
+        });
+
+    case MY_ARTICLES:
+      return Object.assign({}, state,
+        {
+          fetching: false,
           articles: action.articles,
         });
 
@@ -35,4 +43,4 @@ const articles = (state = initialState, action) => {
   }
 };
 
-export default articles;
+export default articlesReducer;
