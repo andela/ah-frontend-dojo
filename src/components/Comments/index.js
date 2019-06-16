@@ -11,7 +11,7 @@ export default class Comments extends Component {
       <div className="CommentsContainer">
         <div className="commentForm" align="left">
           <div className="commentAuthor">
-            <img src="http://localhost:8080/src/assets/images/banner.jpg" alt="commenter avartar" />
+            <img src="http://localhost:8080/src/assets/images/avartar.jpg" alt="commenter avartar" />
             <p>Add your comment here</p>
           </div>
           <form>
@@ -26,7 +26,7 @@ export default class Comments extends Component {
         <div className="commentsList">
           <div className="commentCard">
             <div className="commentAuthor">
-              <img src="http://localhost:8080/src/assets/images/banner.jpg" alt="commenter avartar" />
+              <img src="http://localhost:8080/src/assets/images/avartar.jpg" alt="commenter avartar" />
               <p><b>Innocent Lou</b></p>
             </div>
             <div className="commentBody">
@@ -53,7 +53,7 @@ export default class Comments extends Component {
           </div>
           <div className="commentCard">
             <div className="commentAuthor">
-              <img src="http://localhost:8080/src/assets/images/banner.jpg" alt="commenter avartar" />
+              <img src="http://localhost:8080/src/assets/images/avartar.jpg" alt="commenter avartar" />
               <p><b>James Mudidi</b></p>
             </div>
             <div className="commentBody">

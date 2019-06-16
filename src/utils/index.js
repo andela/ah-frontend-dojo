@@ -1,8 +1,8 @@
 import { shallow } from 'enzyme';
 import jwt_decode from 'jwt-decode';
 
-export const baseURL = 'http://127.0.0.1:8000/api';
-// export const baseURL = 'https://ah-backend-dojo-dev.herokuapp.com/api';
+// export const baseURL = 'http://127.0.0.1:8000/api';
+export const baseURL = 'https://ah-backend-d ojo-dev.herokuapp.com/api';
 export const author = sessionStorage.getItem('username');
 export const formatDate = (rawDate) => {
   const longDateTime = new Date(rawDate);

@@ -18,7 +18,7 @@ class App extends Component {
           <Route path="/reset-password" render={props => <PasswordResetPage {...props} />} />
           <Route exact path="/articles/" render={props => <Articles {...props} />} />
           <Route exact path="/article/" render={props => <Article {...props} />} />
-          <Route exact path="/article/slug" render={props => <ArticlePage {...props} />} />
+          <Route exact path="/article/:slug" render={props => <ArticlePage {...props} />} />
           <Route component={PageNotFound} />
         </Switch>
       </Router>

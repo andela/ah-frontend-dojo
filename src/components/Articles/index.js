@@ -41,12 +41,12 @@ class Articles extends Component {
         <div className="articleTitle">{ article.title }</div>
         <img src="http://localhost:8080/src/assets/images/banner.jpg" className="articleImg" alt="aritcle image" />
         <div className="articleAuthor">
-          <img className="avartarSmall" src="http://localhost:8080/src/assets/images/banner.jpg" alt="author avartar" />
+          <img className="avartarSmall" src="http://localhost:8080/src/assets/images/avartar.jpg" alt="author avartar" />
           <p><a href="/authors/">{ article.author }</a></p>
         </div>
         <div className="articleBody">{ article.body }</div>
         <div className="bodyLinks-row-1">
-          <p className="bodyButton pushLeft"><a href="/article/slug"><span>more</span></a></p>
+          <p className="bodyButton pushLeft"><a href={`/article/${article.id}`}><span>more</span></a></p>
           <p className="bodyLitText pushRight">
             <b>Dated: </b>
             {formatDate(article.updatedAt)}

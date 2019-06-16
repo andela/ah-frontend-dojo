@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // react libraries
 import React, { Component } from 'react';
 
@@ -5,15 +6,24 @@ import React, { Component } from 'react';
 import './ArticleCardLarge.scss';
 
 // components
+import { formatDate } from 'utils';
 import Comments from '../Comments';
 
 export default class ArticleCardLarge extends Component {
   render() {
+    const {
+      title,
+      body,
+      description,
+      author,
+      updatedAt,
+      time_to_read,
+    } = this.props;
     return (
       <div className="mainCanvas">
         <div className="cardCanvas">
           <div className="titlePanel">
-            <p>this is an article title</p>
+            <p>{ title }</p>
           </div>
           <div className="imagePanel">
             <img src="http://localhost:8080/src/assets/images/banner.jpg" alt="article img" />
@@ -21,51 +31,32 @@ export default class ArticleCardLarge extends Component {
           <div className="flexedRow">
             <div className="columnPanel aurthorPanel">
               <div className="authorAvartar">
-                <img src="http://localhost:8080/src/assets/images/banner.jpg" alt="article img" />
+                <img src="http://localhost:8080/src/assets/images/avartar.jpg" alt="article img" />
               </div>
               <div className="authorName">
                 <p align="left">
-                  <b>Zack Atama</b>
-                  <form>
-                    <buttom type="submit" className="buttonSmall buttonLarge">
-                      View profile
-                    </buttom>
-                  </form>
+                  <b>{ author }</b>
+                  <br />
+                  <button type="submit" className="buttonSmall buttonLarge">
+                    View profile
+                  </button>
                 </p>
               </div>
             </div>
             <div className="columnPanel align-inText-right lightedParagraph">
               <p>
                 <b>Date: </b>
-                02-06-2019
+                { formatDate(updatedAt) }
               </p>
               <p>
                 <b>Read time: </b>
-                2mins
+                { time_to_read }
               </p>
             </div>
           </div>
           <div className="bodyPanel">
-            <p>
-            rerum tempore vitae sequi sint nihil reprehenderi
-            dolor beatae ea dolores neque fugiat blanditiis
-            voluptate porro vel nihil molestiae ut reiciendis
-            qui aperiam non debitis possimus qui ad mollitia
-            et omnis minus architecto odit voluptas doloremque
-            maxime aut non ipsa qui alias veniam blanditiis
-            culpa aut quia nihil cumque facere et occaecati qui
-            aspernatur quia eaque ut aperiam inventore ad
-            mollitia et omnis minus architecto odit voluptas doloremque
-            maxime aut non ipsa qui alias veniam
-            blanditiis culpa aut quia nihil cumque facere et occaecati
-            qui aspernatur quia eaque ut aperiam
-            inventore ad mollitia et omnis minus architecto odit
-            voluptas doloremque maxime aut non ipsa qui
-            alias veniam blanditiis culpa aut quia nihil cumque
-            facere et occaecati qui aspernatur quia eaque ut
-            aperiam inventore ad mollitia et omnis minus architecto
-            odit voluptas doloremque maxime aut non ipsa
-            </p>
+            <p className="description">{ description }</p>
+            <p>{ body }</p>
           </div>
           <div className="additionalDetails inlinePosition">
             <p>
@@ -74,15 +65,15 @@ export default class ArticleCardLarge extends Component {
             </p>
             <p>
               <b>Views: </b>
-              1000
+              {/* { read_stats.views } */}
             </p>
             <p>
               <b>Likes: </b>
-              230
+              {/* { likeCount.likes } */}
             </p>
             <p>
               <b>Dislikes: </b>
-              12
+              {/* { likeCount.dislikes } */}
             </p>
           </div>
           <div className="additionalDetails inlinePosition">

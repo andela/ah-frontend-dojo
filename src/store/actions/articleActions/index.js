@@ -58,7 +58,7 @@ export const getAllArticles = () => (dispatch) => {
 };
 
 export const getAllMyAricles = () => (dispatch) => {
-  const url = `${baseURL}${'/articles/?author='}${author}`;
+  const url = `${baseURL}${'/articles/'}`;
 
   // fetch all logged in user's articles
   axios.get(url, {
@@ -67,6 +67,17 @@ export const getAllMyAricles = () => (dispatch) => {
     },
   })
     .then(({ data }) => dispatch(myArticles(data.results.articles)))
+    .catch(error => dispatch(getArticalsError(error)));
+};
+
+export const getOneArticle = id => (dispatch) => {
+  const url = `${baseURL}${'/articles/'}${id}/`;
+  axios.get(url, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(({ data }) => dispatch(getArticle(data.article)))
     .catch(error => dispatch(getArticalsError(error)));
 };
 
@@ -82,7 +93,7 @@ export const newArticle = article => (dispatch) => {
 const articleActions = {
   getArticles,
   getAllArticles,
-  getArticle,
+  getOneArticle,
   getAllMyAricles,
   createArticle,
   editArticle,

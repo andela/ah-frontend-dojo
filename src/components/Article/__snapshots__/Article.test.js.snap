@@ -9,6 +9,20 @@ exports[`Article Component matches the snapshot 1`] = `
   >
     <Connect(Navbar) />
     <div
+      align="left"
+      className="breadcrumbs"
+    >
+      <ul>
+        <li>
+          <img
+            alt="breadcrumbs"
+            src="http://localhost:8080/src/assets/images/breadcrumbs.png"
+          />
+          /Create Article/
+        </li>
+      </ul>
+    </div>
+    <div
       align="center"
       className="inputPanel"
     >
