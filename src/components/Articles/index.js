@@ -38,7 +38,7 @@ class Articles extends Component {
 
     const articlesList = articles.map(article => (
       <div key={article.id} className="articleCard" align="left">
-        <div className="articleTitle">{ article.title }</div>
+        <div className="articleTitle"><a href={`/article/${article.id}`}>{ article.title }</a></div>
         <img src="http://localhost:8080/src/assets/images/banner.jpg" className="articleImg" alt="aritcle image" />
         <div className="articleAuthor">
           <img className="avartarSmall" src="http://localhost:8080/src/assets/images/avartar.jpg" alt="author avartar" />
@@ -66,6 +66,17 @@ class Articles extends Component {
         <div className="bodyLinks-row-2">
           <p className="bodyLitText pushLeft"><b>Likes: </b>{article.likeCount[0].likes}</p>
           <p className="bodyLitText pushRight"><b>Dislikes: </b>{article.likeCount[0].dislikes}</p>
+        </div>
+        <div className="additionalDetails inlinePosition smallText">
+          <p>
+            <b>Tags: </b>
+            <button type="submit" className="buttonSmallx">Default</button>
+            <button type="submit" className="buttonSmallx pythonTag">Python</button>
+            <button type="submit" className="buttonSmallx javascriptTag">JavaScript</button>
+            <button type="submit" className="buttonSmallx djangoTag">Django 2.1</button>
+            <button type="submit" className="buttonSmallx reactTag">React</button>
+            <button type="submit" className="buttonSmallx reduxTag">Redux</button>
+          </p>
         </div>
       </div>
     ));

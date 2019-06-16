@@ -194,6 +194,7 @@
   border: 0.06rem #2D658661 solid;
   border-radius: 1rem;
   font-family: $primary-font-family;
+  padding-bottom: 0.5rem;
 }
 
 .articleTitle {
@@ -203,6 +204,19 @@
   margin: 0.5rem;
   overflow: hidden;
   height: 1.5rem;
+}
+
+.articleTitle a {
+  text-decoration: none;
+  color: $primary;
+}
+
+.articleTitle a:hover {
+  color: $secondary;
+}
+
+.articleTitle a:active {
+  opacity: 0.8;
 }
 
 .articleImg {
@@ -259,6 +273,7 @@
   overflow: hidden;
   font-size: 0.8rem;
   text-align: left;
+  line-height: 150%;
 }
 
 .bodyLinks-row-1 {

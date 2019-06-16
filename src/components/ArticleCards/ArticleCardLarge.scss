@@ -137,14 +137,32 @@
   outline: none;
 }
 
-.buttonSmall:hover {
+.buttonSmallx {
+  padding: 0.1rem 0.8rem;
+  background: $primary;
+  color: $white;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin: 0.1rem 0.2rem;
+  border: 0.06rem $primary solid;
+  text-shadow: $text-shadow-black;
+  box-shadow: $box-shadow-grey;
+  outline: none;
+}
+
+.buttonSmall:hover, .buttonSmallx:hover {
   background: $secondary;
   border: 0.06rem $secondary solid;
   color: $white;
 }
 
-.buttonSmall:active {
+.buttonSmall:active, .buttonSmallx:active {
   opacity: 0.8;
+}
+
+.smallText {
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
 }
 
 .buttonLarge {
