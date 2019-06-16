@@ -125,25 +125,34 @@
 }
 
 .buttonSmall {
-  padding: 0.3rem 1rem;
+  padding: 0.1rem 1rem 0.2rem 1rem;
   background: $primary;
   color: $white;
   border-radius: 10rem;
   cursor: pointer;
   margin: 0 0.2rem;
   border: 0.06rem $primary solid;
-  text-shadow: $text-shadow-black;
-  box-shadow: $box-shadow-grey;
   outline: none;
 }
 
-.buttonSmall:hover {
+.buttonSmallx {
+  padding: 0.05rem 0.5rem 0.2rem 0.5rem;
+  background: $primary;
+  color: $white;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin: 0.1rem 0.2rem;
+  border: 0.06rem $primary solid;
+  outline: none;
+}
+
+.buttonSmall:hover, .buttonSmallx:hover {
   background: $secondary;
   border: 0.06rem $secondary solid;
   color: $white;
 }
 
-.buttonSmall:active {
+.buttonSmall:active, .buttonSmallx:active {
   opacity: 0.8;
 }
 
@@ -164,35 +173,4 @@
 .commentsPanel {
   width: 90%;
   margin-left: 10%;
-}
-
-// custom tag classes for [ Python, Django, JavaScript, Ruby, React, Redux ]
-.pythonTag {
-  background: $primary;
-  color: $Yellow;
-  border: 0.06rem $Yellow solid;
-}
-
-.javascriptTag {
-  background: $orange;
-  border: 0.06rem $white solid;
-  color: $white;
-}
-
-.djangoTag {
-  background: $green;
-  border: 0.06rem $white solid;
-  color: $white;
-}
-
-.reactTag {
-  background: $primary;
-  border: 0.06rem $white solid;
-  color: $white;
-}
-
-.reduxTag {
-  background: $purple;
-  border: 0.06rem $white solid;
-  color: $white;
 }

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 // react libraries
 import React, { Component } from 'react';
@@ -7,7 +6,6 @@ import React, { Component } from 'react';
 import 'components/Loader/Loader.scss';
 import 'components/Footer/Footer.scss';
 import './Articles.scss';
-import './ArticlesOnly.scss';
 
 // third party libraries
 import { connect } from 'react-redux';
@@ -16,9 +14,11 @@ import PropTypes from 'prop-types';
 
 // thunks (action creators)
 import Navbar from 'components/NavBar';
+import Search from 'components/Search';
+import TagslistSmall from 'components/TagsList';
 import Footer from 'components/Footer';
 import { getAllMyAricles } from 'store/actions/articleActions';
-import { formatDate } from 'utils';
+import { defaultImgURL, formatDate } from 'utils';
 
 class Articles extends Component {
   componentDidMount() {
@@ -38,10 +38,10 @@ class Articles extends Component {
 
     const articlesList = articles.map(article => (
       <div key={article.id} className="articleCard" align="left">
-        <div className="articleTitle">{ article.title }</div>
-        <img src="http://localhost:8080/src/assets/images/banner.jpg" className="articleImg" alt="aritcle image" />
+        <div className="articleTitle"><a href={`/article/${article.id}`}>{ article.title }</a></div>
+        <img src={`${defaultImgURL}/images/banner.jpg`} className="articleImg" alt="aritcle image" />
         <div className="articleAuthor">
-          <img className="avartarSmall" src="http://localhost:8080/src/assets/images/avartar.jpg" alt="author avartar" />
+          <img className="avartarSmall" src={`${defaultImgURL}/images/avartar.jpg`} alt="author avartar" />
           <p><a href="/authors/">{ article.author }</a></p>
         </div>
         <div className="articleBody">{ article.body }</div>
@@ -53,19 +53,38 @@ class Articles extends Component {
           </p>
         </div>
         <div className="bodyLinks-row-2">
-          <p className="bodyLitText pushLeft"><b>Average rating: </b>(4.6) (1000)</p>
+          <p className="bodyLitText pushLeft">
+            <b>Average rating: </b>
+            (4.6) (1000)
+          </p>
           <p className="bodyLitText pushRight">
             <b>Read: </b>
-            {article.time_to_read} mins
+            {article.time_to_read}
+            mins
           </p>
         </div>
         <div className="bodyLinks-row-2">
-          <p className="bodyLitText pushLeft"><b>Views: </b>{article.read_stats.views}</p>
-          <p className="bodyLitText pushRight"><b>Comments: </b>12</p>
+          <p className="bodyLitText pushLeft">
+            <b>Views: </b>
+            {article.read_stats.views}
+          </p>
+          <p className="bodyLitText pushRight">
+            <b>Comments: </b>
+            12
+          </p>
         </div>
         <div className="bodyLinks-row-2">
-          <p className="bodyLitText pushLeft"><b>Likes: </b>{article.likeCount[0].likes}</p>
-          <p className="bodyLitText pushRight"><b>Dislikes: </b>{article.likeCount[0].dislikes}</p>
+          <p className="bodyLitText pushLeft">
+            <b>Likes: </b>
+            {article.likeCount[0].likes}
+          </p>
+          <p className="bodyLitText pushRight">
+            <b>Dislikes: </b>
+            {article.likeCount[0].dislikes}
+          </p>
+        </div>
+        <div className="tagContainer">
+          <TagslistSmall />
         </div>
       </div>
     ));
@@ -76,25 +95,13 @@ class Articles extends Component {
         </div>
         <div className="breadcrumbs" align="left">
           <ul>
-            <li><img src="http://localhost:8080/src/assets/images/breadcrumbs.png" alt="breadcrumbs" />/Articles</li>
+            <li>
+              <img src="http://localhost:8080/src/assets/images/breadcrumbs.png" alt="breadcrumbs" />
+              /Articles
+            </li>
           </ul>
         </div>
-        <div className="searchPanel">
-          <div className="filterPanel">
-            <p className="filerHeader"><b>FILTERS:</b></p>
-            <p className="filterLinks">
-              |<a href="/articles/">My Articles</a>|
-              <a href="/articles/">Todays Articles</a>|
-              <a href="/articles/">Most Popular</a>|
-              <a href="/articles/">Most Liked</a>|
-              <a href="/articles/">Trending</a>|
-            </p>
-          </div>
-          <form>
-            <input type="text" className="search-bar" />
-            <button type="submit" className="search-bar">SEARCH</button>
-          </form>
-        </div>
+        <Search />
         <div align="center" className="articlesCanvas">
           <div className="articlesContainer">
             {articlesList}

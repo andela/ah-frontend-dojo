@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { baseURL, author, axiosConfig } from 'utils';
+import { baseURL, axiosConfig } from 'utils';
 import {
   GET_ARTICLES,
   GET_ARTICLES_START,

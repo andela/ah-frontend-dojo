@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 import './ArticleCardLarge.scss';
 
 // components
-import { formatDate } from 'utils';
+import { defaultImgURL, formatDate } from 'utils';
 import Comments from '../Comments';
 
 export default class ArticleCardLarge extends Component {
@@ -19,6 +19,7 @@ export default class ArticleCardLarge extends Component {
       updatedAt,
       time_to_read,
     } = this.props;
+    const articleImg = `${defaultImgURL}/images/banner.jpg`;
     return (
       <div className="mainCanvas">
         <div className="cardCanvas">
@@ -26,7 +27,7 @@ export default class ArticleCardLarge extends Component {
             <p>{ title }</p>
           </div>
           <div className="imagePanel">
-            <img src="http://localhost:8080/src/assets/images/banner.jpg" alt="article img" />
+            <img src={articleImg} alt="article img" />
           </div>
           <div className="flexedRow">
             <div className="columnPanel aurthorPanel">
