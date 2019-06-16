@@ -102,6 +102,16 @@
   text-align: left;
 }
 
+.additionalDetailsSmall {
+  width: 96%;
+  padding: 0.4rem 1rem;
+  color: $primary;
+  font-size: 0.8rem;
+  font-family: $primary-font-family;
+  text-align: left;
+
+}
+
 .inlinePosition p {
   display: inline;
   margin-right: 2rem;
@@ -114,7 +124,8 @@
   border-radius: 10rem;
   cursor: pointer;
   margin: 0 0.2rem;
-  border: 0.06rem $white solid;
+  border: 0.06rem $primary solid;
+  text-shadow: $text-shadow-black;
   box-shadow: $box-shadow-grey;
   outline: none;
 }
@@ -127,6 +138,20 @@
 
 .buttonSmall:active {
   opacity: 0.8;
+}
+
+.buttonLarge {
+  padding: 0.3rem 1rem;
+  background: $primary;
+  color: $white;
+  font-size: 0.8rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin: 0 0.2rem;
+  border: 0.06rem $primary solid;
+  text-shadow: $text-shadow-black;
+  box-shadow: $box-shadow-grey;
+  outline: none;
 }
 
 .commentsPanel {
@@ -149,6 +174,12 @@
 
 .djangoTag {
   background: $green;
+  border: 0.06rem $white solid;
+  color: $white;
+}
+
+.reactTag {
+  background: $primary;
   border: 0.06rem $white solid;
   color: $white;
 }

@@ -29,7 +29,7 @@ export default class ArticlePage extends Component {
         </div>
         <div className="breadcrumbs" align="left">
           <ul>
-            <li><img src="http://localhost:8080/src/assets/images/breadcrumbs.png" alt="breadcrumbs" />/Articles</li>
+            <li><img src="http://localhost:8080/src/assets/images/breadcrumbs.png" alt="breadcrumbs" />/<a href="/articles"><b>Articles</b></a>/Article/</li>
           </ul>
         </div>
         <div className="searchPanel">

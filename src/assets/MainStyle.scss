@@ -19,9 +19,11 @@ $Yellow: #FFE600;
 $orange: #FFB300;
 $green: #01731E;
 $purple: #7D0AE1;
+$box-shadow-primary: rem(0px) rem(0.5px) rem(2px) $primary;
 $box-shadow-grey: rem(0px) rem(2px) rem(4px) $grey;
 $box-shadow-white: rem(0px) rem(2px) rem(4px) $white;
-$primary-text-shadow-black: rem(0px) rem(2px) rem(4px) $black;
+$text-shadow-primary: rem(0px) rem(2px) rem(4px) $primary;
+$text-shadow-black: rem(0px) rem(2px) rem(4px) $black;
 
 * {
   box-sizing: border-box;

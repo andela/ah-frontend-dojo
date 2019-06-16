@@ -59,6 +59,14 @@ export class Article extends Component {
       <div className="canvas">
         <div className="landing">
           <Navbar />
+          <div className="breadcrumbs" align="left">
+            <ul>
+              <li>
+                <img src="http://localhost:8080/src/assets/images/breadcrumbs.png" alt="breadcrumbs" />
+                /Create Article/
+              </li>
+            </ul>
+          </div>
           {/* <ProgressLoader /> */}
           <div className="inputPanel" align="center">
             <div className="inputForm">

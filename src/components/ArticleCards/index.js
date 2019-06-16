@@ -24,7 +24,14 @@ export default class ArticleCardLarge extends Component {
                 <img src="http://localhost:8080/src/assets/images/banner.jpg" alt="article img" />
               </div>
               <div className="authorName">
-                <p>Zack Atama</p>
+                <p align="left">
+                  <b>Zack Atama</b>
+                  <form>
+                    <buttom type="submit" className="buttonSmall buttonLarge">
+                      View profile
+                    </buttom>
+                  </form>
+                </p>
               </div>
             </div>
             <div className="columnPanel align-inText-right lightedParagraph">
@@ -33,7 +40,7 @@ export default class ArticleCardLarge extends Component {
                 02-06-2019
               </p>
               <p>
-                <b>Read time:</b>
+                <b>Read time: </b>
                 2mins
               </p>
             </div>
@@ -58,46 +65,6 @@ export default class ArticleCardLarge extends Component {
             facere et occaecati qui aspernatur quia eaque ut
             aperiam inventore ad mollitia et omnis minus architecto
             odit voluptas doloremque maxime aut non ipsa
-            qui alias veniam blanditiis culpa aut quia nihil
-            cumque facere et occaecati qui aspernatur quia eaque
-            ut aperiam inventore ad mollitia et omnis minus architecto
-            odit voluptas doloremque maxime aut non ipsa
-            qui alias veniam blanditiis culpa aut quia nihil cumque
-            facere et occaecati qui aspernatur quia eaque ut
-            aperiam inventore ad mollitia et omnis minus architecto
-            odit voluptas doloremque maxime aut
-            non ipsa qui alias veniam blanditiis culpa aut quia
-            nihil cumque facere et occaecati qui aspernatur
-            quia eaque ut aperiam inventore
-            rerum tempore vitae sequi sint nihil reprehenderit dolor
-            beatae ea dolores neque fugiat blanditiis
-            voluptate porro vel nihil molestiae ut reiciendis qui
-            aperiam non debitis possimus qui ad mollitia
-            et omnis minus architecto odit voluptas doloremque maxime
-            aut non ipsa qui alias veniam blanditiis
-            culpa aut quia nihil cumque facere et occaecati qui
-            aspernatur quia eaque ut aperiam inventore ad
-            mollitia et omnis minus architecto odit voluptas
-            doloremque maxime aut non ipsa qui alias veniam
-            blanditiis culpa aut quia nihil cumque facere et
-            occaecati qui aspernatur quia eaque ut aperiam
-            inventore ad mollitia et omnis minus architecto
-            odit voluptas doloremque maxime aut non ipsa qui
-            alias veniam blanditiis culpa aut quia nihil cumque
-            facere et occaecati qui aspernatur quia eaque ut
-            aperiam inventore ad mollitia et omnis minus
-            architecto odit voluptas doloremque maxime aut non ipsa
-            qui alias veniam blanditiis culpa aut quia nihil
-            cumque facere et occaecati qui aspernatur quia eaque
-            ut aperiam inventore ad mollitia et omnis minus
-            architecto odit voluptas doloremque maxime aut non ipsa
-            qui alias veniam blanditiis culpa aut quia nihil cumque
-            facere et occaecati qui aspernatur quia eaque ut
-            aperiam inventore ad mollitia et omnis minus architecto
-            odit voluptas doloremque maxime aut
-            non ipsa qui alias veniam blanditiis culpa aut quia nihil
-            cumque facere et occaecati qui aspernatur
-            quia eaque ut aperiam inventore
             </p>
           </div>
           <div className="additionalDetails inlinePosition">
@@ -113,14 +80,19 @@ export default class ArticleCardLarge extends Component {
               <b>Likes: </b>
               230
             </p>
+            <p>
+              <b>Dislikes: </b>
+              12
+            </p>
           </div>
           <div className="additionalDetails inlinePosition">
             <p>
               <b>Tags: </b>
+              <button type="submit" className="buttonSmall">Default</button>
               <button type="submit" className="buttonSmall pythonTag">Python</button>
               <button type="submit" className="buttonSmall javascriptTag">JavaScript</button>
               <button type="submit" className="buttonSmall djangoTag">Django 2.1</button>
-              <button type="submit" className="buttonSmall">React</button>
+              <button type="submit" className="buttonSmall reactTag">React</button>
               <button type="submit" className="buttonSmall reduxTag">Redux</button>
             </p>
           </div>
