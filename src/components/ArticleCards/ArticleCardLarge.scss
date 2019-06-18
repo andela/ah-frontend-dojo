@@ -1,0 +1,176 @@
+@import 'assets/MainStyle.scss';
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import "sass-rem";
+
+// To be made general classes
+.flexedRow {
+  width: 98%;
+  display: flex;
+  padding: 1%;
+  align-items: center;
+}
+
+.columnPanel {
+  flex: 1;
+}
+
+.lightedParagraph p {
+  font-size: 1rem;
+  font-family: $primary-font-family;
+  margin: 0.5rem 0;
+  color: $primary;
+}
+
+.align-inText-right {
+  text-align: right;
+}
+
+.splitLine {
+  width: 97%;
+  margin: 0 1.5%;
+  border-bottom: 0.06rem $primary-light-3 solid;
+  height: 0.5rem;
+}
+
+// Custom to this component
+.mainCanvas {
+  padding-top: 2rem;
+  background: $white;
+  margin-bottom: 6rem;
+}
+
+.cardCanvas {
+  width: 66%;
+  background: $primary-light-1;
+  border-radius: 1.5rem;
+  box-shadow: $box-shadow-grey;
+  padding-bottom: 2rem;
+  
+}
+
+.titlePanel {
+  background: $primary;
+  border-radius: 1.5rem 1.5rem 0 0;
+  font-size: 1.5rem;
+  padding: 0.8rem 0;
+  font-family: $primary-font-family;
+  color: $white;
+}
+
+.imagePanel {
+  width: 100%;
+}
+
+.imagePanel img {
+  width: 100%;
+}
+
+.aurthorPanel {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.authorAvartar img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50rem;
+  box-shadow: $box-shadow-grey;
+}
+
+.authorName {
+  font-size: 1.5rem;
+  font-family: $primary-font-family;
+  margin-left: 1rem;
+  color: $primary;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: $primary;
+  margin: 0.5rem 0;
+  font-family: $primary-font-family;
+}
+
+.bodyPanel {
+  width: 98%;
+  padding: 0 1%;
+  text-align: left;
+  line-height: 150%;
+  color: $grey;
+}
+
+.additionalDetails {
+  width: 98%;
+  padding: 1%;
+  color: $primary;
+  font-size: 1rem;
+  font-family: $primary-font-family;
+  text-align: left;
+}
+
+.additionalDetailsSmall {
+  width: 96%;
+  padding: 0.4rem 1rem;
+  color: $primary;
+  font-size: 0.8rem;
+  font-family: $primary-font-family;
+  text-align: left;
+
+}
+
+.inlinePosition p {
+  display: inline;
+  margin-right: 2rem;
+}
+
+.buttonSmall {
+  padding: 0.1rem 1rem 0.2rem 1rem;
+  background: $primary;
+  color: $white;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin: 0 0.2rem;
+  border: 0.06rem $primary solid;
+  outline: none;
+}
+
+.buttonSmallx {
+  padding: 0.05rem 0.5rem 0.2rem 0.5rem;
+  background: $primary;
+  color: $white;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin: 0.1rem 0.2rem;
+  border: 0.06rem $primary solid;
+  outline: none;
+}
+
+.buttonSmall:hover, .buttonSmallx:hover {
+  background: $secondary;
+  border: 0.06rem $secondary solid;
+  color: $white;
+}
+
+.buttonSmall:active, .buttonSmallx:active {
+  opacity: 0.8;
+}
+
+.buttonLarge {
+  padding: 0.3rem 1rem;
+  background: $primary;
+  color: $white;
+  font-size: 0.8rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin: 0 0.2rem;
+  border: 0.06rem $primary solid;
+  text-shadow: $text-shadow-black;
+  box-shadow: $box-shadow-grey;
+  outline: none;
+}
+
+.commentsPanel {
+  width: 90%;
+  margin-left: 10%;
+}

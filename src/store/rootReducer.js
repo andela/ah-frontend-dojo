@@ -4,16 +4,17 @@ import registerReducer from 'store/reducers/registerReducer';
 import loginReducer from 'store/reducers/loginReducer';
 import confirmEmailReducer from 'store/reducers/confirmEmailReducer';
 import passwordResetReducer from 'store/reducers/passwordResetReducer';
-
-import articles from './reducers/articles';
+import articlesReducer from 'store/reducers/articlesReducer';
+import articleReducer from 'store/reducers/article';
 
 
 const rootReducers = combineReducers({
   registerReducer,
   loginReducer,
-  articles,
   confirmEmailReducer,
-  passwordResetReducer
+  passwordResetReducer,
+  articlesReducer,
+  articleReducer,
 });
 
 export default rootReducers;
