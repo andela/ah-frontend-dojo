@@ -9,10 +9,12 @@ import './ArticlePage.scss';
 
 // components
 import Navbar from 'components/NavBar';
+import Search from 'components/Search';
 import Footer from 'components/Footer';
 import { connect } from 'react-redux';
-import ArticleCardLarge from '../../components/ArticleCards';
-import { getOneArticle } from '../../store/actions/articleActions';
+import ArticleCardLarge from 'components/ArticleCards';
+import { getOneArticle } from 'store/actions/articleActions';
+import { defaultImgURL } from 'utils';
 
 export class ArticlePage extends Component {
   componentDidMount() {
@@ -36,25 +38,15 @@ export class ArticlePage extends Component {
         </div>
         <div className="breadcrumbs" align="left">
           <ul>
-            <li><img src="http://localhost:8080/src/assets/images/breadcrumbs.png" alt="breadcrumbs" />/<a href="/articles"><b>Articles</b></a>/Article/</li>
+            <li>
+              <img src={`${defaultImgURL}/images/breadcrumbs.png`} alt="breadcrumbs" />
+              /
+              <a href="/articles"><b>Articles</b></a>
+              /Article/
+            </li>
           </ul>
         </div>
-        <div className="searchPanel">
-          <div className="filterPanel">
-            <p className="filerHeader"><b>FILTERS:</b></p>
-            <p className="filterLinks">
-              |<a href="/articles/">My Articles</a>|
-              <a href="/articles/">Todays Articles</a>|
-              <a href="/articles/">Most Popular</a>|
-              <a href="/articles/">Most Liked</a>|
-              <a href="/articles/">Trending</a>|
-            </p>
-          </div>
-          <form>
-            <input type="text" className="search-bar" />
-            <button type="submit" className="search-bar">SEARCH</button>
-          </form>
-        </div>
+        <Search />
         <div align="center" className="articlesCanvas">
           <div className="articleContainer">
             <ArticleCardLarge {...article} />

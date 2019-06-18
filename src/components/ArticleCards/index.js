@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import './ArticleCardLarge.scss';
 
 // components
+import Tagslist from 'components/TagsList';
 import { defaultImgURL, formatDate } from 'utils';
 import Comments from '../Comments';
 
@@ -77,17 +78,8 @@ export default class ArticleCardLarge extends Component {
               {/* { likeCount.dislikes } */}
             </p>
           </div>
-          <div className="additionalDetails inlinePosition">
-            <p>
-              <b>Tags: </b>
-              <button type="submit" className="buttonSmall">Default</button>
-              <button type="submit" className="buttonSmall pythonTag">Python</button>
-              <button type="submit" className="buttonSmall javascriptTag">JavaScript</button>
-              <button type="submit" className="buttonSmall djangoTag">Django 2.1</button>
-              <button type="submit" className="buttonSmall reactTag">React</button>
-              <button type="submit" className="buttonSmall reduxTag">Redux</button>
-            </p>
-          </div>
+          {/* tagsList component here */}
+          <Tagslist />
           <div className="splitLine" />
           <div className="commentsPanel">
             <Comments />

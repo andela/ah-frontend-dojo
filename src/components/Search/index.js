@@ -20,7 +20,7 @@ export default class Search extends Component {
             <a href="/articles/">Most Liked</a>
             |
             <a href="/articles/">Trending</a>
-            |git
+            |
           </p>
         </div>
         <form>

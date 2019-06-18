@@ -83,9 +83,8 @@ class Articles extends Component {
             {article.likeCount[0].dislikes}
           </p>
         </div>
-        <div className="tagContainer">
-          <TagslistSmall />
-        </div>
+        {/* tagsList component here */}
+        <TagslistSmall />
       </div>
     ));
     return (
@@ -101,6 +100,7 @@ class Articles extends Component {
             </li>
           </ul>
         </div>
+        {/* search component here */}
         <Search />
         <div align="center" className="articlesCanvas">
           <div className="articlesContainer">

@@ -6,7 +6,7 @@
   font-size: 0.8rem;
   padding-left: 0.5rem;
   color: $primary;
-  font-family: $primary-font-fagit mily;
+  font-family: $primary-font-family;
   text-align: left;
 }
 
@@ -60,4 +60,9 @@
   background: $purple;
   border: 0.06rem $white solid;
   color: $white;
+}
+
+.iconPrimary {
+  font-size: 0.2rem;
+  color: $primary;
 }
