@@ -101,4 +101,11 @@ export const axiosConfig = {
   },
 };
 
+export const readMinutes = (readTimeData) => {
+  if (readTimeData === 1) {
+    return `${readTimeData} min `;
+  }
+  return `${readTimeData} mins `;
+};
+
 export default formatDate;

@@ -322,6 +322,8 @@
 .bodyLitText {
   font-size: 0.8rem;
   color: $primary;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .otherLinks {

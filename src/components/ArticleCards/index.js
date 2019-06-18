@@ -7,7 +7,7 @@ import './ArticleCardLarge.scss';
 
 // components
 import Tagslist from 'components/TagsList';
-import { defaultImgURL, formatDate } from 'utils';
+import { defaultImgURL, formatDate, readMinutes } from 'utils';
 import Comments from '../Comments';
 
 export default class ArticleCardLarge extends Component {
@@ -51,8 +51,8 @@ export default class ArticleCardLarge extends Component {
                 { formatDate(updatedAt) }
               </p>
               <p>
-                <b>Read time: </b>
-                { time_to_read }
+                { readMinutes(time_to_read) }
+                Read
               </p>
             </div>
           </div>

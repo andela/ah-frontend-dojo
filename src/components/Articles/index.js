@@ -18,7 +18,7 @@ import Search from 'components/Search';
 import TagslistSmall from 'components/TagsList';
 import Footer from 'components/Footer';
 import { getAllMyAricles } from 'store/actions/articleActions';
-import { defaultImgURL, formatDate } from 'utils';
+import { defaultImgURL, formatDate, readMinutes } from 'utils';
 
 class Articles extends Component {
   componentDidMount() {
@@ -58,9 +58,8 @@ class Articles extends Component {
             (4.6) (1000)
           </p>
           <p className="bodyLitText pushRight">
-            <b>Read: </b>
-            {article.time_to_read}
-            mins
+            { readMinutes(article.time_to_read) }
+            Read
           </p>
         </div>
         <div className="bodyLinks-row-2">
