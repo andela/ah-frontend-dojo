@@ -8,7 +8,8 @@ import './ArticleCardLarge.scss';
 // components
 import Tagslist from 'components/TagsList';
 import { defaultImgURL, formatDate, readMinutes } from 'utils';
-import Comments from '../Comments';
+import ArticleLikeDislike from 'components/ArticleLikeDislike';
+import Comments from 'components/Comments';
 
 export default class ArticleCardLarge extends Component {
   render() {
@@ -67,17 +68,12 @@ export default class ArticleCardLarge extends Component {
             </p>
             <p>
               <b>Views: </b>
-              {/* { read_stats.views } */}
-            </p>
-            <p>
-              <b>Likes: </b>
-              {/* { likeCount.likes } */}
-            </p>
-            <p>
-              <b>Dislikes: </b>
-              {/* { likeCount.dislikes } */}
+              (0000)
+              {/* { read_stats[0].views } */}
             </p>
           </div>
+          {/* articleLikeDislike component here */}
+          <ArticleLikeDislike />
           {/* tagsList component here */}
           <Tagslist />
           <div className="splitLine" />

@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 // styles
+import './Search.scss';
 
 export default class Search extends Component {
   render() {
