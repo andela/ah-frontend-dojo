@@ -1,0 +1,24 @@
+@import 'sass-rem';
+@import 'assets/MainStyle.scss';
+
+.bookmarks {
+  width: 80%;
+  
+  &__isBookmarked {
+    background-image: url("../../assets/images/icons8-bookmark-filled-50.png");
+    height: rem(50px);
+    width: rem(50px);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__notBookmarked {
+    background-image: url("../../assets/images/icons8-bookmark-50.png");
+    height: rem(50px);
+    width: rem(50px);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+}
