@@ -12,6 +12,9 @@ import {
   updateProfileRequest,
 } from 'store/actions/profileActions';
 
+// import components
+import FollowProfileButton from 'components/Follow';
+
 // import default image
 import {
   DEFAULT_IMAGE
@@ -28,6 +31,7 @@ class Sidebar extends Component {
     super(props);
     this.state = {
       showResults: false,
+      followings: false,
     };
   }
 
@@ -42,6 +46,10 @@ class Sidebar extends Component {
   */
   onChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+  }
+
+  clickFollowButton = () => {
+    console.log('Follow button');
   }
 
   /**
@@ -74,14 +82,14 @@ class Sidebar extends Component {
 
   render() {
     const {
-      authenticatedUsername, profile: { profile },
+      authenticatedUsername, following, followers, profile: { profile },
       match: { params: { profileUser } }
     } = this.props;
     const {
       firstname, lastname, username, email, image, bio,
     } = profile;
 
-    const { showResults } = this.state;
+    const { showResults, followings } = this.state;
     return (
       <div className="sidebar">
         <div>
@@ -108,6 +116,7 @@ class Sidebar extends Component {
             </Form>
           ) }
         </div>
+
         <div className="username center-align">{username}</div>
         <div className="fullname center-align">
           {firstname}
@@ -116,16 +125,24 @@ class Sidebar extends Component {
         </div>
         <div className="email center-align">{email}</div>
         <div className="bio center-align ">{bio}</div>
+        <div>
+          {' '}
+          <FollowProfileButton
+            username={username}
+            following={followings}
+            onButtonClick={this.clickFollowButton}
+          />
+        </div>
         <div className="follow-div">
           <div className="follow-stats">
             <div className="count center-align ">
-              0
+              {following}
             </div>
             <div className="title center-align">Followings</div>
           </div>
           <div>
             <div className="count center-align">
-              0
+              {followers}
             </div>
             <div className="title center-align">Followers</div>
           </div>
@@ -152,6 +169,8 @@ Sidebar.propTypes = {
     bio: PropTypes.string,
   }),
   authenticatedUsername: PropTypes.string.isRequired,
+  followers: PropTypes.number,
+  following: PropTypes.number,
 };
 
 // Assigning default props
@@ -163,6 +182,8 @@ Sidebar.defaultProps = {
     email: '',
     bio: '',
   },
+  followers: 0,
+  following: 0,
 };
 
 /**
