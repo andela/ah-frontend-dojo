@@ -160,10 +160,17 @@ export class Navbar extends Component {
                 </Link>
               </li>
               <li className="navbar__navigation__articles__ul__li">
-                <Link className="navbar__navigation__articles__ul__li--button" to="/articles">
+                <Link className="navbar__navigation__articles__ul__li--button" id="articlesActive" to="/articles">
                   Articles
                 </Link>
               </li>
+              {user.token && (
+                <li className="navbar__navigation__articles__ul__li">
+                  <Link className="navbar__navigation__articles__ul__li--button" id="writeActive" to="/article">
+                    Write
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>

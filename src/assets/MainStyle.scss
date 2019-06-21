@@ -4,15 +4,36 @@ $primary-font-family: "Open Sans", sans-serif;
 $secondary-font-family: "Lobster", sans-serif;
 
 $primary: #2D6686;
+$primary-light-3: #2D658656;
+$primary-light-2: #2D658623;
+$primary-light-1: #2D658612;
 $primary-ultra-light: #D9E3F0;
 $secondary: #E91E63;
+$secondary-light-3: #E91E6277;
 $white: #FFFFFF;
 $black: #021019;
 $shadow: #D3D6DB;
+$black: #000000;
+$grey: #555555;
+$Yellow: #FFE600;
+$orange: #FFB300;
+$green: #05AD2F;
+$blue: #1C64FF;
+$red: #FF1C1C;
+$purple: #7D0AE1;
+$box-shadow-primary: rem(0px) rem(0.5px) rem(2px) $primary;
+$box-shadow-grey: rem(0px) rem(2px) rem(4px) $grey;
+$box-shadow-white: rem(0px) rem(2px) rem(4px) $white;
+$text-shadow-primary: rem(0px) rem(2px) rem(4px) $primary;
+$text-shadow-black: rem(0px) rem(2px) rem(4px) $black;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 
+}
+
+.iconSmall {
+  color: $primary;
 }

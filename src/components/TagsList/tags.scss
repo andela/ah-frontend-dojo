@@ -1,0 +1,68 @@
+@import 'assets/MainStyle.scss';
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+@import "sass-rem";
+
+.tagsListSmall {
+  font-size: 0.8rem;
+  padding-left: 1.5rem;
+  color: $primary;
+  font-family: $primary-font-family;
+  text-align: left;
+}
+
+.tagsListSmall button {
+  padding: 0.1rem 0.8rem 0.2rem 0.8rem;
+  background: $primary;
+  color: $white;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin: 0.4rem 0.5rem;
+  border: 0.06rem $primary solid;
+  outline: none;
+}
+
+.tagsListSmall button:hover {
+  background: $secondary;
+  border: 0.06rem $secondary solid;
+  color: $white;
+}
+
+.tagsListSmall button:active {
+  opacity: 0.8;
+}
+
+// custom tag classes for [ Python, Django, JavaScript, Ruby, React, Redux ]
+.pythonTag {
+  background: $primary;
+  color: $Yellow;
+  border: 0.06rem $Yellow solid;
+}
+
+.javascriptTag {
+  background: $orange;
+  border: 0.06rem $white solid;
+  color: $white;
+}
+
+.djangoTag {
+  background: $green;
+  border: 0.06rem $white solid;
+  color: $white;
+}
+
+.reactTag {
+  background: $primary;
+  border: 0.06rem $white solid;
+  color: $white;
+}
+
+.reduxTag {
+  background: $purple;
+  border: 0.06rem $white solid;
+  color: $white;
+}
+
+.iconPrimary {
+  font-size: 0.2rem;
+  color: $primary;
+}

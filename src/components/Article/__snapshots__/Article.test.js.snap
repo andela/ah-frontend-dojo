@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article Component matches the snapshot 1`] = `
+<div
+  className="canvas"
+>
+  <div
+    className="landing"
+  >
+    <Connect(Navbar) />
+    <div
+      align="left"
+      className="breadcrumbs"
+    >
+      <ul>
+        <li>
+          <img
+            alt="breadcrumbs"
+            src="https://res.cloudinary.com/andelaprojects/image/upload/v1561099269/breadcrumbs_qot92i.png"
+          />
+          /Create Article/
+        </li>
+      </ul>
+    </div>
+    <div
+      align="center"
+      className="inputPanel"
+    >
+      <div
+        className="inputPanel__inputForm"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <input
+            className="inputPanel__inputForm--input"
+            name="title"
+            onChange={[Function]}
+            placeholder="Title"
+            required={true}
+            type="text"
+            value=""
+          />
+          <input
+            className="inputPanel__inputForm--input"
+            id="description"
+            name="description"
+            onChange={[Function]}
+            placeholder="Description"
+            required={true}
+            type="text"
+            value=""
+          />
+          <textarea
+            className="inputPanel__inputForm--textarea"
+            name="body"
+            onChange={[Function]}
+            placeholder="Body"
+            required={true}
+            type="text"
+            value=""
+          />
+          <button
+            className="inputPanel__inputForm--button"
+            name="createArtile"
+            type="submit"
+          >
+            Create Article
+          </button>
+        </form>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</div>
+`;

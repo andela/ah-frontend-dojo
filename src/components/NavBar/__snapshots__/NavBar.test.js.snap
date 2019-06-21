@@ -96,6 +96,7 @@ exports[`NavBar component should render without crushing 1`] = `
         >
           <Link
             className="navbar__navigation__articles__ul__li--button"
+            id="articlesActive"
             replace={false}
             to="/articles"
           >

@@ -40,16 +40,42 @@ const data = {
     success: {
       user: {
         auth_token: 'eyB0eJDiOiJKW1PiKCJ'
-      }
+      },
     },
     failure: {
       errors: {
         error: [
           'We have failed to verify your credentials'
-        ]
-      }
+        ],
+      },
     }
-  }
+  },
+  articleData: {
+    success: {
+      article: {
+        id: 5,
+        slug: 'how-to-write-unit-tests-with-tdd-sq8w',
+        title: 'How to write unit tests with TDD',
+        body: 'Writing Unit test with TDD',
+        description: 'This article is about how to write unittests using pytest',
+        author: 'adojo',
+        publish_status: false,
+        createdAt: '2019-06-13T13:09:22.983075Z',
+        updatedAt: '2019-06-13T13:09:22.983234Z',
+        delete_status: false,
+        tagList: [],
+        time_to_read: 1,
+        read_stats: {
+          views: 0,
+          reads: 0
+        },
+        likeCount: {
+          likes: 0,
+          dislikes: 0,
+        }
+      }
+    },
+  },
 };
 
 export default data;
