@@ -4,11 +4,11 @@ import registerReducer from 'store/reducers/registerReducer';
 import loginReducer from 'store/reducers/loginReducer';
 import confirmEmailReducer from 'store/reducers/confirmEmailReducer';
 import passwordResetReducer from 'store/reducers/passwordResetReducer';
+import followReducer from 'store/reducers/followReducer';
 import articles from './reducers/articles';
 import facebookReducer from './reducers/socialReducer/Facebook';
 import googleReducer from './reducers/socialReducer/Google';
 import profile from './reducers/profileReducer';
-
 
 const rootReducers = combineReducers({
   registerReducer,
@@ -19,6 +19,7 @@ const rootReducers = combineReducers({
   facebookReducer,
   googleReducer,
   profile,
+  followReducer,
 });
 
 export default rootReducers;

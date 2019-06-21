@@ -13,6 +13,10 @@ import ProfileMain from 'components/Profile/Index';
 
 // import actions creator
 import { fetchProfileRequest } from 'store/actions/profileActions';
+import {
+  getFollowersActionCreator,
+  getFollowingActionCreator,
+} from 'store/actions/followActions';
 
 // import styles
 import './Profile.scss';
@@ -24,8 +28,10 @@ export class Profile extends Component {
     const { match } = this.props;
     if (match) {
       const { params: { profileUser } } = match;
-      const { fetchProfile } = this.props;
+      const { fetchProfile, getFollowers, getFollowings } = this.props;
       fetchProfile(profileUser);
+      getFollowers();
+      getFollowings();
     }
   }
 
@@ -57,6 +63,8 @@ Profile.propTypes = {
     })
   }).isRequired,
   fetchProfile: PropTypes.func,
+  getFollowers: PropTypes.func,
+  getFollowings: PropTypes.func,
   authenticatedUser: PropTypes.string.isRequired,
 };
 
@@ -69,17 +77,27 @@ Profile.defaultProps = {
     bio: '',
   },
   fetchProfile: () => { },
+  getFollowers: () => {},
+  getFollowings: () => {},
 };
 
 export const mapStateToProps = state => ({
   profile: state.profile,
-  authenticatedUser: state.loginReducer.user.username
+  authenticatedUser: state.loginReducer.user.username,
+  followers: state.followReducer.followers.followers,
+  following: state.followReducer.following.following,
 });
 
 export const mapDispatchToProps = dispatch => ({
   fetchProfile: (username) => {
     dispatch(fetchProfileRequest(username));
-  }
+  },
+  getFollowers: () => {
+    dispatch(getFollowersActionCreator());
+  },
+  getFollowings: () => {
+    dispatch(getFollowingActionCreator());
+  },
 });
 
 export default connect(
